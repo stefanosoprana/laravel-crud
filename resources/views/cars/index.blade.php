@@ -4,6 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
+        <h1>Cars <a href="{{ route('cars.create') }}" class="btn btn-primary">Add new car</a></h1>
         <table class="table">
           <thead>
             <tr>
@@ -28,7 +29,7 @@
             @endforeach
           </tbody>
         </table>
-      </div>  
+      </div>
     </div>
   </div>
 @endsection

@@ -16,12 +16,18 @@ class CarController extends Controller
 
     public function create()
     {
-        //
+        return view('cars.create');
     }
 
     public function store(Request $request)
     {
-        //
+        $data =  $request->all();
+
+        $newCar = new Car();
+        $newCar->fill($data);
+        $newCar->save();
+
+        return redirect()->route('cars.index');
     }
 
     public function show($id)
