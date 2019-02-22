@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/car', 'CarController@index');
+Route::get('/', function() {
+  return view('home');
+});
+
+Route::resource('/cars', 'CarController');
